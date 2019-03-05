@@ -156,64 +156,64 @@
 		pins = "PC6", "PC7", "PC8", "PC9",
 		       "PC10", "PC11", "PC12", "PC13",
 		       "PC14", "PC15";
-		function = "mmc2";
+		allwinner,function = "mmc2";
 		drive-strength = <30>;
 		bias-pull-up;
 	};
 
 	i2s0_data_pins: i2s0-data-pins {
 		pins = "PB6", "PB7", "PB8", "PB9";
-		function = "i2s0";
+		allwinner,function = "i2s0";
 	};
 
 	i2s0_mclk_pin: i2s0-mclk-pin {
 		pins = "PB5";
-		function = "i2s0";
+		allwinner,function = "i2s0";
 	};
 
 	uart1_cts_rts_pins: uart1-cts-rts-pins {
 		pins = "PG5", "PG6";
-		function = "uart1";
+		allwinner,function = "uart1";
 	};
 
 	uart1_pe_pins: uart1-pe-pins {
 		pins = "PE10", "PE11";
-		function = "uart1";
+		allwinner,function = "uart1";
 	};
 
 	uart1_pg_pins: uart1-pg-pins {
 		pins = "PG3", "PG4";
-		function = "uart1";
+		allwinner,function = "uart1";
 	};
 
 	uart2_pd_pins: uart2-pd-pins {
 		pins = "PD2", "PD3";
-		function = "uart2";
+		allwinner,function = "uart2";
 	};
 
 	uart2_cts_rts_pd_pins: uart2-cts-rts-pd-pins {
 		pins = "PD4", "PD5";
-		function = "uart2";
+		allwinner,function = "uart2";
 	};
 
 	uart3_pg_pins: uart3-pg-pins {
 		pins = "PG9", "PG10";
-		function = "uart3";
+		allwinner,function = "uart3";
 	};
 
 	uart3_cts_rts_pg_pins: uart3-cts-rts-pg-pins {
 		pins = "PG11", "PG12";
-		function = "uart3";
+		allwinner,function = "uart3";
 	};
 
 	pwm0_pin: pwm0-pin {
 		pins = "PB2";
-		function = "pwm";
+		allwinner,function = "pwm";
 	};
 
 	pwm1_pins: pwm1-pin {
 		pins = "PG13";
-		function = "pwm1";
+		allwinner,function = "pwm1";
 	};
 };
 
