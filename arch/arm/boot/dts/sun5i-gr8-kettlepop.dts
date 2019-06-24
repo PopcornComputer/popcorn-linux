@@ -299,7 +299,7 @@
 &uart2 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart2_pd_pins>, <&uart2_cts_rts_pd_pins>;
-	status = "disabled";
+	status = "okay";
 };
 
 &uart3 {
