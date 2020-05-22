@@ -275,11 +275,7 @@
 	regulator-name = "vcc-1v8";
 };
 
-&reg_usb0_vbus {
-	vin-supply = <&reg_vcc5v0>;
-	gpio = <&pio 1 10 GPIO_ACTIVE_HIGH>; /* PB10 */
-	status = "okay";
-};
+
 
 &spi2 {
 	pinctrl-names = "default";
@@ -322,6 +318,6 @@
 
 	usb0_id_det-gpio = <&pio 6 2 GPIO_ACTIVE_HIGH>; /* PG2 */
 	usb0_vbus_power-supply = <&usb_power_supply>;
-	usb0_vbus-supply = <&reg_usb0_vbus>;
+	usb0_vbus-supply = <&reg_vcc5v0>;
 	usb1_vbus-supply = <&reg_vcc5v0>;
 };
