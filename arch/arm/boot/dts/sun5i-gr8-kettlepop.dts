@@ -113,10 +113,6 @@
 #include "axp209.dtsi"
 
 &i2c1 {
-	status = "disabled";
-};
-
-&i2c1 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c1_pins_a>;
 	status = "okay";
