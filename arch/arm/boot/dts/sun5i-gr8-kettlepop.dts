@@ -317,18 +317,6 @@
 	status = "okay";
 };
 
-&usb_otg {
-	/*
-	 * The CHIP Pro doesn't have a controllable VBUS, nor does it
-	 * have any 5v rail on the board itself.
-	 *
-	 * If one wants to use it as a true OTG port, it should be
-	 * done in the baseboard, and its DT / overlay will add it.
-	 */
-	dr_mode = "otg";
-	status = "okay";
-};
-
 &usb_power_supply {
 	status = "okay";
 };
