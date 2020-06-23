@@ -333,3 +333,9 @@
 	usb1_vbus-supply = <&reg_vcc5v0>;
 	status = "okay";
 };
+
+&touch {
+	pinctrl-names = "default";
+	pinctrl-0 = <&touch_reset_pins>;
+	status = "okay";
+}
