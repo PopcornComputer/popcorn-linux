@@ -262,7 +262,7 @@
 &pwm {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pwm0_pin>, <&pwm1_pins>;
-	status = "disabled";
+	status = "okay";
 };
 
 &reg_dcdc2 {
