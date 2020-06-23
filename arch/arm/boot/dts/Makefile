@@ -627,6 +627,7 @@ dtb-$(CONFIG_MACH_SUN5I) += \
 	sun5i-a13-q8-tablet.dtb \
 	sun5i-a13-utoo-p66.dtb \
 	sun5i-gr8-kettlepop.dtb \
+	sun5i-gr8-pocketpc.dtb \
 	sun5i-r8-chip.dtb \
 	sun5i-r8-popcorn.dtb
 dtb-$(CONFIG_MACH_SUN6I) += \
