@@ -249,7 +249,7 @@
 	        allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
 	};
 
-	touch_reset_pins: touch-reset-pin {
+	touch_reset_pins: touch-reset-pin@0 {
 		allwinner,pins = "PG2";
 		allwinner,function = "gpio_out";
 			allwinner,drive = <SUN4I_PINCTRL_10_MA>;
@@ -331,11 +331,5 @@
 &usbphy {
 	usb0_vbus_power-supply = <&usb_power_supply>;
 	usb1_vbus-supply = <&reg_vcc5v0>;
-	status = "okay";
-};
-
-&touchscreen {
-	pinctrl-names = "default";
-	pinctrl-0 = <&touch_reset_pins>;
 	status = "okay";
 };
