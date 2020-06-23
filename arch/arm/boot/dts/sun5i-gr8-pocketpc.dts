@@ -338,4 +338,4 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&touch_reset_pins>;
 	status = "okay";
-}
+};
