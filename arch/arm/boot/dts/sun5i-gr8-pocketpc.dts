@@ -70,6 +70,15 @@
 		stdout-path = "serial0:115200n8";
 	};
 
+	backlight: backlight {
+		compatible = "pwm-backlight";
+		pwms = <&pwm 0 10000 0>;
+		enable-gpios = <&pio 6 2 GPIO_ACTIVE_LOW>;
+
+		brightness-levels = <0 10 20 30 40 50 60 70 80 90 100>;
+		default-brightness-level = <8>;
+	};
+
 	leds {
 		compatible = "gpio-leds";
 
@@ -247,13 +256,6 @@
 		allwinner,function = "pwm1";
 	        allwinner,drive = <SUN4I_PINCTRL_10_MA>;
 	        allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
-	};
-
-	touch_reset_pins: touch-reset-pin@0 {
-		allwinner,pins = "PG2";
-		allwinner,function = "gpio_out";
-			allwinner,drive = <SUN4I_PINCTRL_10_MA>;
-			allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
 	};
 };
 
