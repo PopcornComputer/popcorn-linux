@@ -629,7 +629,8 @@ dtb-$(CONFIG_MACH_SUN5I) += \
 	sun5i-gr8-kettlepop.dtb \
 	sun5i-gr8-pocketpc.dtb \
 	sun5i-r8-chip.dtb \
-	sun5i-r8-popcorn.dtb
+	sun5i-r8-popcorn.dtb \
+	sun5i-r8-popcorn-legendary.dtb
 dtb-$(CONFIG_MACH_SUN6I) += \
 	sun6i-a31-app4-evb1.dtb \
 	sun6i-a31-colombus.dtb \
