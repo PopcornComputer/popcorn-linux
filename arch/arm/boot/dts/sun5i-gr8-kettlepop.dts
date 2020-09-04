@@ -161,6 +161,20 @@
 };
 
 &pio {
+	usb0_id_pin_crumb: usb0-id-pin@0 {
+		allwinner,pins = "PG2";
+		allwinner,function = "gpio_in";
+		allwinner,drive = <SUN4I_PINCTRL_10_MA>;
+		allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
+	};
+
+	wifi_reg_on_pin_crumb: wifi-reg-on-pin@0 {
+		allwinner,pins = "PB10";
+		allwinner,function = "gpio_out";
+		allwinner,drive = <SUN4I_PINCTRL_10_MA>;
+		allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
+	};
+
 	mmc2_8bit_pins: mmc2-8bit-pins {
 		allwinner,pins = "PC6", "PC7", "PC8", "PC9",
 		       "PC10", "PC11", "PC12", "PC13",
@@ -314,6 +328,22 @@
 &uart3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart3_pg_pins>, <&uart3_cts_rts_pg_pins>;
+	status = "okay";
+};
+
+&usb_otg {
+	/*
+	 * The GR8-EVB has a somewhat interesting design. There's a
+	 * pin supposed to control VBUS, an ID pin, a VBUS detect pin,
+	 * so everything should work just fine.
+	 *
+	 * Except that the pin supposed to control VBUS is not
+	 * connected to any controllable output, neither to the SoC
+	 * through a GPIO or to the PMIC, and it is pulled down,
+	 * meaning that we will never be able to enable VBUS on this
+	 * board.
+	 */
+	dr_mode = "otg";
 	status = "okay";
 };
 
